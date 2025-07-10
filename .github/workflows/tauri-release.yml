@@ -1,5 +1,8 @@
 name: publish-desktop
 
+permissions:
+  contents: write
+
 on:
   push:
     branches: [ release ]          # builds whenever you push to “release”
