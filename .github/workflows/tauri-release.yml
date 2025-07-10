@@ -30,6 +30,10 @@ jobs:
 
       - uses: dtolnay/rust-toolchain@stable
 
+      - name: Add x86_64 macOS target
+        if: matrix.args == '--target x86_64-apple-darwin'
+        run: rustup target add x86_64-apple-darwin
+
       - name: Install dependencies
         run: npm install
 
